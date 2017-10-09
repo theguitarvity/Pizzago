@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 @section('content')
-  
     <div class="col s12 z-depth-4 card-panel login">
         <form action="{{route('login')}}" method="post" class="col s6">
         {{ csrf_field() }}
@@ -46,10 +45,4 @@
            
         </form>
     </div>
-    <script>
-         $(document).ready(function(){
-            $('.parallax').parallax();
-         });
-        
-    </script>
 @endsection
