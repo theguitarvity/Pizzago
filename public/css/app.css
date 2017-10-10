@@ -6,16 +6,45 @@ html, body {
     height: 100vh;
    
 }
+h1,h2,h3,h4,h5,h6{
+    color: #fff;
+    font-weight: bold;
+}
 .login{
    width: 50%;
-   margin:0 auto;
-   float: right;
+  
    
+}
+.title h1,h2,h3,h4,h5,h6{
+    color: #333;
+    
+}
+a.button-collapse.top-nav i {
+    
+        font-size: 32px;
+    
+}
+body{
+    background-color: #fff;
+}
+@media screen and (min-width: 768px) {
+    .login {
+       
+        margin:0 auto;
+        float: right;
+    }
+  }
+.login a{
+    color: red;
+    
 }
 form button{
     float:left;
-    
+    font-weight: bold; 
     margin-left: 20px;
+}
+form label{
+    font-weight: bold;
 }
 .submit{
     background-color: red;
@@ -78,4 +107,38 @@ body{
 }
 .brand-logo a{
     margin-top: 110px;
+}
+
+
+/*
+    dashboard
+*/
+.side-nav a img{
+    text-align: center;
+    margin-left:40px;
+}
+.logo-container{
+    width: 100px;
+    height: 150px;
+}
+.logo-dash{
+    margin: 0 auto;
+    text-align: center;
+}
+.gray{
+    background-color: #222;
+}
+
+.side-nav.fixed {
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    position: fixed;
+    background-color: #333;
+}
+.color{
+    color: yellow;
+}
+.hide-on-med-and-down a{
+    font-weight: bold;
 }

@@ -20,24 +20,26 @@
         
     </head>
     <body>
+        <div class="navbar-fixed">
+            <nav>
+            @if(Route::has('login'))
+                <div class="nav-wrapper menu">
+                    @auth
+                        <a href="{{url('/home')}}" class = "brand-logo" >Home</a>
+                    @else
+                    <a href="{{url('/')}}" class="brand-logo"><img src="{{asset('img/logo.png')}}" alt="logo" class="logo"></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="{{url('/sobre')}}">Sobre nós</a></li>
+                        <li><a href="{{route('login')}}">Minha Conta</a></li>
+                        <li><a href="{{route('register')}}">Cadastre-se</a></li>
+                        
+                    </ul>
+                    @endauth
+                </div>
+            @endif    
+            </nav>
+        </div>
        
-        <nav>
-        @if(Route::has('login'))
-            <div class="nav-wrapper menu">
-                @auth
-                    <a href="{{url('/home')}}" class = "brand-logo" >Home</a>
-                @else
-                <a href="{{url('/')}}" class="brand-logo"><img src="{{asset('img/logo.png')}}" alt="logo" class="logo"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url('/sobre')}}">Sobre nós</a></li>
-                    <li><a href="{{route('login')}}">Minha Conta</a></li>
-                    <li><a href="{{route('register')}}">Cadastre-se</a></li>
-                    
-                </ul>
-                @endauth
-            </div>
-        @endif    
-        </nav>
         
         <div class="content">
         
