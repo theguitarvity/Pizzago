@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="col s12 z-depth-4 card-panel login">
+
+    <div class="col z-depth-4 card-panel login">
+
         <form action="{{route('login')}}" method="post" class="col s6">
         {{ csrf_field() }}
             <div class="row">
@@ -44,5 +46,9 @@
             </div>
            
         </form>
+    </div>
+    <div id="index-banner" class="parallax-container" style="background-size:cover;">
+
+        <div class="parallax"><img src="https://images6.alphacoders.com/412/412086.jpg" alt="Unsplashed background img 1"></div>
     </div>
 @endsection

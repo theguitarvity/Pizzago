@@ -22,7 +22,7 @@
     <body>
         <header>
             
-            <nav class="nav-extended red">
+            <nav class="nav-extended menu">
                 <div class="nav-wrapper">
                 
                 <ul class="right hide-on-med-and-down">
@@ -63,7 +63,7 @@
             <ul style="backgroun-color:#222;" class="side-nav fixed gray" id="nav-mobile" style="transform: translateX(0%);">
                 <li>
                     <a href="/teste">
-                        <img src="{{asset('img/logo.png')}}" alt="logo" width="120">
+                        <img src="{{asset('img/logo4.png')}}" alt="logo" width="350">
                     </a>
                 </li>
             </ul>

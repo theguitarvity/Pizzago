@@ -18,9 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/partner', function(){
+    return view('owner',['title'=>'Seja um PizzaOwner']);
+});
 Route::get('/teste', function(){
-    return view('testeRegister');
+    return view('testeLogin');
 });
 
 Route::get('/sobre', function(){
