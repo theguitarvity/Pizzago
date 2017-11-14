@@ -1,0 +1,21 @@
+views:
+register
+login
+home
+sobre
+admin
+adminPanel
+clientPanel
+newPedido
+
+
+
+controllers
+
+home
+user
+
+gerenciadores de rotas
+
+api
+web

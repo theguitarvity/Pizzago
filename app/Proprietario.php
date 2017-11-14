@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Proprietario extends Model
+class Proprietario extends Funcionario
 {
     //
 }

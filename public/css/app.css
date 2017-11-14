@@ -147,3 +147,6 @@ body{
 .hide-on-med-and-down a{
     font-weight: bold;
 }
+.cardItem{
+    margin-left: 10px 10px 10px 100px;
+}
