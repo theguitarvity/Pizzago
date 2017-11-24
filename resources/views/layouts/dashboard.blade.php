@@ -15,11 +15,28 @@
         <!-- Styles -->
         <link rel="stylesheet" href="style.css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+       
         <link rel="stylesheet" href="{{asset('css/materialize.css')}}">
+ 
+       
+       
+        
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- Materializecss compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <!-- jQueryValidation Plugin -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <!--Import Materialize-Stepper JavaScript (after the jquery.validate.js and materialize.js) -->
+       
+       
+
 
         
     </head>
     <body>
+   
         <header>
             
             <nav class="nav-extended menu">
@@ -73,9 +90,13 @@
 
             @yield('content')
         </div>
+        
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
+       
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <!-- <script src="./materialize-stepper.min.js"></script> -->
+        
     </body>
 </html>
