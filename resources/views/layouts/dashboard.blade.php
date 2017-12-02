@@ -47,7 +47,7 @@
                         <li><a href="{{route('login')}}">Entrar</a></li>
                         <li><a href="{{route('cadastro')}}">Cadastrar-se</a></li>
                     @else
-                        <li><a>Ola, {{ Auth::user()->name }}</a></li>
+                        <li><a>Ola, {{ Auth::user()->nomeUsuario }}</a></li>
                         <li>
                             <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

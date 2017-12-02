@@ -1,14 +1,13 @@
 <?php
 
 namespace App;
-
+use App\User;
 use Illuminate\Database\Eloquent\Model;
-use User;
+
 class Cliente extends User
 {
     //
     protected $fillable = [
-        'idCliente', 'telefoneCliente', 'enderecoCliente'
+        'codCliente','telefoneCliente', 'enderecoCliente',
     ];
-
 }

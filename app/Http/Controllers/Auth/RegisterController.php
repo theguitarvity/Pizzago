@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Cliente;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/dashboard';
-
+    protected $cod;
     /**
      * Create a new controller instance.
      *
@@ -62,8 +63,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $this->createUser($data);
+        return Cliente::create([
+            'codCliente'=>$this->cod,
+            'telefoneCliente'=>$data['telefone'],
+            'enderecoCliente'=>$data['endereco']
+        ]);
+        
+    }
+    protected function createUser(array $data){
+        $this->code = rand(1111111,9999999);
         return User::create([
-            'name' => $data['name'],
+            'id'=>$this->code,
+            'nomeUsuario' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

@@ -27,6 +27,22 @@
                 @endif
             </div>
         </div> 
+        <div class="row">
+            <div class="input-field col s6 " >
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="telefone" id="telefone" class="validate" required autofocus>
+                <label for="telefone">Telefone</label>
+               
+            </div>
+        </div> 
+        <div class="row">
+            <div class="input-field col s6 " >
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="endereco" id="endereco" class="validate" required autofocus>
+                <label for="endereco">Endereço</label>
+               
+            </div>
+        </div> 
         <div class="row ">    
             <div class="input-field col s6 {{ $errors->has('password') ? ' has-error' : '' }}">
                 <i class="material-icons prefix">lock_outline</i>
