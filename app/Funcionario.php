@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Funcionario extends Model
+class Funcionario extends User
 {
     //
     protected $fillable = [

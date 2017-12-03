@@ -30,6 +30,8 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/dashboard';
     protected $cod;
+    protected $cliente;
+    protected $user;
     /**
      * Create a new controller instance.
      *
@@ -63,21 +65,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $this->createUser($data);
+        $cod = rand(1111111,9999999);
+        $this->cliente = new Cliente($cod, $data['name'], $data['email'], bcrypt($data['password']), $data['    endereco'], $data['telefone']);
+        
+        $this->createUser($this->cliente);
+
+
         return Cliente::create([
-            'codCliente'=>$this->cod,
-            'telefoneCliente'=>$data['telefone'],
-            'enderecoCliente'=>$data['endereco']
+            'codCliente'=>$this->cliente->getCodCliente() ,
+            'telefoneCliente'=>$this->cliente->getTelefoneCliente(),
+            'enderecoCliente'=>$this->cliente->getEnderecoCliente(),
+
         ]);
         
     }
-    protected function createUser(array $data){
-        $this->code = rand(1111111,9999999);
+    protected function createUser(Cliente $cliente){
+        //$this->code = rand(1111111,9999999);
         return User::create([
-            'id'=>$this->code,
-            'nomeUsuario' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'id' => $cliente->getCodCliente(),
+            'nomeUsuario' => $cliente->getNomeCliente(),
+            'email' => $cliente->getEmailCliente(),
+            'password' => $cliente->getSenhaCliente(),
         ]);
     }
 }

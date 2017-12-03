@@ -24,7 +24,7 @@ class User extends Authenticatable
     public function __construct($cod, $nome, $email, $senha){
         $this->codUser = $cod;
         $this->nomeUser = $nome;
-        $this->emailUser = $emai;
+        $this->emailUser = $email;
         $this->senha = $senha;
     }
 

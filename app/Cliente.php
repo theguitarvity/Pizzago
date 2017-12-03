@@ -26,7 +26,7 @@ class Cliente extends User
         return parent::getEmailUser();
     }
     public function getSenhaCliente(){
-        return parent::getSenhaUser;
+        return parent::getSenhaUser();
     }
     public function getEnderecoCliente(){
         return $this->enderecoCliente;
