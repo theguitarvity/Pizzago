@@ -66,7 +66,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $cod = rand(1111111,9999999);
-        $this->cliente = new Cliente($cod, $data['name'], $data['email'], bcrypt($data['password']), $data['    endereco'], $data['telefone']);
+        $this->cliente = new Cliente($cod, $data['name'], $data['email'], bcrypt($data['password']), $data['endereco'], $data['telefone']);
         
         $this->createUser($this->cliente);
 
