@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="col s12 z-depth-4 card-panel login">
+<div class="col s12 z-depth-4 card-panel register">
     <form action="{{route('register')}}" method="post">
     {{ csrf_field() }}
         <div class="row">

@@ -37,10 +37,20 @@ a.button-collapse.top-nav i {
         margin:0 auto;
         float: right;
     }
+    .register{
+        margin: 0 auto;
+        float: right;
+        
+        width: 50%;
+    }
+    
   }
 .login a{
     color: red;
     
+}
+.modal{
+    width: 80%;
 }
 form button{
     float:left;

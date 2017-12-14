@@ -66,26 +66,26 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $cod = rand(1111111,9999999);
-        $this->cliente = new Cliente($cod, $data['name'], $data['email'], bcrypt($data['password']), $data['endereco'], $data['telefone']);
-        
-        $this->createUser($this->cliente);
+        //$this->cliente = new Cliente();
+        //$this->cliente->criar($cod, $data['name'], $data['email'], bcrypt($data['password']), $data['endereco'], $data['telefone']);
+        $this->createUser($data, $cod);
 
 
         return Cliente::create([
-            'codCliente'=>$this->cliente->getCodCliente() ,
-            'telefoneCliente'=>$this->cliente->getTelefoneCliente(),
-            'enderecoCliente'=>$this->cliente->getEnderecoCliente(),
+            'codCliente'=>$cod,
+            'telefoneCliente'=>$data['telefone'],
+            'enderecoCliente'=>$data['endereco'],
 
         ]);
         
     }
-    protected function createUser(Cliente $cliente){
+    protected function createUser(Array $data, $cod){
         //$this->code = rand(1111111,9999999);
         return User::create([
-            'id' => $cliente->getCodCliente(),
-            'nomeUsuario' => $cliente->getNomeCliente(),
-            'email' => $cliente->getEmailCliente(),
-            'password' => $cliente->getSenhaCliente(),
+            'id' => $cod,
+            'nomeUsuario' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
         ]);
     }
 }

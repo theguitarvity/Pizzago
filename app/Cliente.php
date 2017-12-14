@@ -10,11 +10,15 @@ class Cliente extends User
     protected $enderecoCliente;
     protected $telefoneCliente;
 
-    public function __construct($cod, $nome, $email, $senha, $endereco, $telefone){
-        parent::__construct($cod, $nome,$email, $senha);
+    public function criar($cod, $nome, $email, $senha, $endereco, $telefone){
+        parent::__setCodigoUser($cod);
+        parent::__setNomeUser($nome);
+        parent::__setEmailUser($email);
+        parent::__setSenhaUser($senha);
         $this->enderecoCliente = $endereco;
         $this->telefoneCliente = $telefone;
     }
+ 
     public function getCodCliente(){
         return parent::getCodUser();
         

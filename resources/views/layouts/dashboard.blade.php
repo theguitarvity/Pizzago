@@ -18,7 +18,7 @@
        
         <link rel="stylesheet" href="{{asset('css/materialize.css')}}">
  
-       
+       <link rel="stylesheet" href="{{asset('css/materialize-stepper.min.css')}}">
        
         
 
@@ -30,8 +30,12 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
         <!--Import Materialize-Stepper JavaScript (after the jquery.validate.js and materialize.js) -->
        
-       
-
+       <!--SCRIPT-->
+       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
+        <script src="{{asset('js/materialize-stepper.min.js')}}"></script>
 
         
     </head>
@@ -67,7 +71,7 @@
                 </div>
                 <div class="nav-content">
                     <span class="nav-title"style="margin-left:310px; font-weight:bold">Painel</span>
-                    <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+                    <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal modal-trigger" data-target="modal1">
                         <i class="material-icons yellow">add</i>
                     </a>
                 </div>
@@ -91,12 +95,19 @@
             @yield('content')
         </div>
         
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-       
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-        <!-- <script src="./materialize-stepper.min.js"></script> -->
         
+        <script>
+            $(document).ready(function () {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal-trigger').leanModal();
+                
+            });
+            
+        </script>
+        <script>
+            $(function(){
+                $('.stepper').activateStepper();
+            });
+        </script>
     </body>
 </html>

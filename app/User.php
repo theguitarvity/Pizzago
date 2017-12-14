@@ -21,13 +21,20 @@ class User extends Authenticatable
     protected $senhaUser;
 
 
-    public function __construct($cod, $nome, $email, $senha){
+    
+    
+    public function setCodigoUser($cod){
         $this->codUser = $cod;
-        $this->nomeUser = $nome;
-        $this->emailUser = $email;
-        $this->senha = $senha;
     }
-
+    public function setNomeUser($nome){
+        $this->nomeUser = $nome;
+    }
+    public function setEmailUser($email){
+        $this->emailUser = $email;
+    }
+    public function setSenhaUser($senha){
+        $this->senhaUser = $senha;
+    }
     public function getCodUser(){
         return $this->codUser;
     }

@@ -42,7 +42,7 @@
         </div>
        
         
-        <div class="content parallax-container">
+        <div class="content">
         
 
             @yield('content')
