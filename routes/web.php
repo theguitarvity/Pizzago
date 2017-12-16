@@ -12,19 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome',['name'=>'Victor Lopes']);
+    return view('welcome',['name'=>'Victor Lopes', 'bodyBack'=>'body']);
 });
 
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/partner', function(){
-    return view('owner',['title'=>'Seja um PizzaOwner']);
+    return view('owner',['bodyBack'=>'ownerBody']);
+});
+Route::get('/partner/cadastro',function(){
+    return view('registerOwner', ['bodyBack'=>'ownerBody']);
 });
 Route::get('/teste', function(){
     return view('testeLogin');
 });
 
 Route::get('/sobre', function(){
-    return view('sobre');
+    return view('sobre', ['bodyBack'=>'body']);
 });
+

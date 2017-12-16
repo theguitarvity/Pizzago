@@ -1,4 +1,10 @@
-html, body {
+html{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+} 
+
+.body {
     
       color: #fff;
       font-family: 'Raleway', sans-serif;
@@ -173,4 +179,36 @@ body{
   
   .btn:hover, .btn-large:hover {
      background-color: #64b5f6;
+  }
+
+  /*
+    owner page
+  */
+  .owner{
+      background-color: #fff;
+
+  }
+  .ownerBody{
+      background-color: #fff;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      
+      height: 100vh;
+      
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .parallax-container {
+    height:400px;
+  }
+  .parallax{
+    position:static;
+  }
+  .owner-btn{
+      color:#fff;
+      font-weight: bold;
   }

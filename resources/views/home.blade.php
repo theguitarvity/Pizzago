@@ -6,7 +6,7 @@
                     <div class="modal-content">
                         <h3>Realizar um pedido</h3>
                         <p>Siga os procedimentos para estar pedindo a sua pizza</p>
-                        <div class="col s6 z-depth-4 card-panel">
+                        <div class="col s6 z-depth-4">
                             <ul class="stepper horizontal pedido">
                                 <li class="step active">
                                     <div class="step-title waves-effect">Pizzarias próximas</div>
