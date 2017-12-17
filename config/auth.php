@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'owner'=>[
+            'driver'=>'session',
+            'provider'=>'funcionarios',
+        ],
+        'owner-api'=>[
+            'driver'=>'token',
+            'provider'=>'funcionarios'
+        ],
     ],
 
     /*
@@ -68,6 +76,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'funcionarios'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Funcionario::class,
         ],
 
         // 'users' => [

@@ -21,9 +21,11 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/partner', function(){
     return view('owner',['bodyBack'=>'ownerBody']);
 });
+
 Route::get('/partner/cadastro',function(){
     return view('registerOwner', ['bodyBack'=>'ownerBody']);
 });
+Route::post('/partner/cadastrar', 'FuncionarioController@create')->name('funcionario');
 Route::get('/teste', function(){
     return view('testeLogin');
 });

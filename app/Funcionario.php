@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Funcionario extends User
+class Funcionario extends Authenticatable
 {
+    use Notifiable;
+    protected $guard = 'owner';
     protected $nomeFuncionario;
     protected $cpfFuncionario;
     protected $enderecoFuncionario;
@@ -13,7 +15,7 @@ class Funcionario extends User
     private $dataAdmissao;
     private $salarioFuncionario;
 
-    public function __construct($cod, $nome, $email, $senha, $cpf, $endereco, $telefone, $dataAdmissao, $salario){
+    public function criar($cod, $nome, $email, $senha, $cpf, $endereco, $telefone, $dataAdmissao, $salario){
         parent::__construct($cod, $nome,$email, $senha);
         $this->cpfFuncionario = $cpf;
         $this->enderecoFuncionario = $endereco;
@@ -56,6 +58,9 @@ class Funcionario extends User
     }
     
     protected $fillable = [
-        'nomeFuncionario', 'cpfFuncionario', 'enderecoFuncionario', 'telefoneFuncionario',
+        'id','cpfFuncionario', 'enderecoFuncionario', 'telefoneFuncionario',
+    ];
+    protected $hidden = [
+        'password', 'remember_token'
     ];
 }

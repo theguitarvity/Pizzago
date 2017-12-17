@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 <div class="col s12 z-depth-4 left card-panel  register">
-    <form action="{{route('register')}}" method="post">
+    <form action="'/partner/cadastrar'" method="post">
     {{ csrf_field() }}
         <div class="row">
             <div class="input-field col s6 {{ $errors->has('email') ? ' has-error' : '' }}" >
@@ -13,6 +13,14 @@
                         <strong>{{ $errors->first('name') }}</strong>
                     </span>
                 @endif
+            </div>
+        </div> 
+        <div class="row">
+            <div class="input-field col s6 " >
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="cpf" id="cpf" class="validate" required autofocus>
+                <label for="cpf">CPF:</label>
+               
             </div>
         </div> 
         <div class="row">
@@ -35,6 +43,7 @@
                
             </div>
         </div> 
+        
         <div class="row">
             <div class="input-field col s6 " >
                 <i class="material-icons prefix">account_circle</i>
