@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 <div class="col s12 z-depth-4 left card-panel  register">
-    <form action="'/partner/cadastrar'" method="post">
+    <form action="{{url('/partner/cadastrar')}}" method="post">
     {{ csrf_field() }}
         <div class="row">
             <div class="input-field col s6 {{ $errors->has('email') ? ' has-error' : '' }}" >

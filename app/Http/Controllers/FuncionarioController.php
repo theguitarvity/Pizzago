@@ -25,14 +25,15 @@ class FuncionarioController extends Controller
         ]);
     }
     public function create(Requeste $request){
-        $cod = rand(1111111,9999999);
+        /*$cod = rand(1111111,9999999);
         createUser($request, $cod);
         return Funcionario::create([
             'id' => $cod,
             'cpfFuncionario'=>$request->cpf,
             'enderecoFuncionario'=>$request->endereco,
             'telefoneFuncionario'=>$request->telefone,
-        ]);
+        ]);*/
+        return view('welcome');
     }
     protected function createUser(Request $request, $cod){
         //$this->code = rand(1111111,9999999);
