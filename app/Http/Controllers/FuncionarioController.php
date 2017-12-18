@@ -14,7 +14,7 @@ class FuncionarioController extends Controller
     use RegistersUsers;
     protected $redirectTo = '/owner';
     public function __construct(){
-        $this->middleware('auth:owner');
+        $this->middleware('guest');
     }
     protected function validator(array $data)
     {
@@ -24,18 +24,18 @@ class FuncionarioController extends Controller
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
-    public function create(Requeste $request){
-        /*$cod = rand(1111111,9999999);
-        createUser($request, $cod);
+    public function create(Request $request){
+        $cod = rand(1111111,9999999);
+        $this->createUser($request, $cod);
         return Funcionario::create([
             'id' => $cod,
             'cpfFuncionario'=>$request->cpf,
             'enderecoFuncionario'=>$request->endereco,
             'telefoneFuncionario'=>$request->telefone,
-        ]);*/
-        return view('welcome');
+        ]);
+        //return view('welcome');
     }
-    protected function createUser(Request $request, $cod){
+    public function createUser(Request $request, $cod){
         //$this->code = rand(1111111,9999999);
         return User::create([
             'id' => $cod,

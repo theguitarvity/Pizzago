@@ -25,7 +25,13 @@ Route::get('/partner', function(){
 Route::get('/partner/cadastro',function(){
     return view('registerOwner', ['bodyBack'=>'ownerBody']);
 });
-Route::post('/partner/cadastrar', 'FuncionarioController@create')->name('funcionario');
+Route::post('/partner/cadastrar', 'FuncionarioController@create');
+Route::get('/owner',function(){
+    return 'cadastrado';
+});
+Route::get('/owner/login', function(){
+    return view('ownerLogin');
+});
 Route::get('/teste', function(){
     return view('testeLogin');
 });
