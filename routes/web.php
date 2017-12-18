@@ -25,7 +25,7 @@ Route::get('/partner', function(){
 Route::get('/partner/cadastro',function(){
     return view('registerOwner', ['bodyBack'=>'ownerBody']);
 });
-Route::post('/partner/cadastrar', 'FuncionarioController@create');
+Route::post('/partner/cadastrar', 'ProprietarioController@create');
 Route::get('/owner',function(){
     return 'cadastrado';
 });

@@ -60,7 +60,7 @@ class Funcionario extends Authenticatable
     }
     
     protected $fillable = [
-        'id','cpfFuncionario', 'enderecoFuncionario', 'telefoneFuncionario',
+        'codFuncionario','cpfFuncionario', 'enderecoFuncionario', 'telefoneFuncionario',
     ];
     protected $hidden = [
         'password', 'remember_token'

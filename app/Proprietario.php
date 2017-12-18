@@ -11,4 +11,11 @@ class Proprietario extends Authenticatable
     use Notifiable;
     protected $guard = 'owner';
     
+    protected $fillable = [
+        'codFuncionario','cpfFuncionario', 'enderecoFuncionario', 'telefoneFuncionario',
+    ];
+    protected $hidden = [
+        'password', 'remember_token'
+    ];
+    
 }

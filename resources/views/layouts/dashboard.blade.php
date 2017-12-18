@@ -39,7 +39,7 @@
 
         
     </head>
-    <body>
+    <body class="body">
    
         <header>
             
@@ -84,7 +84,7 @@
             <ul style="backgroun-color:#222;" class="side-nav fixed gray" id="nav-mobile" style="transform: translateX(0%);">
                 <li>
                     <a href="/teste">
-                        <img src="{{asset('img/logo4.png')}}" alt="logo" width="350">
+                        <img src="{{asset('img/logo4.png')}}" alt="logo" width="350" style="margin-left:-90px;">
                     </a>
                 </li>
             </ul>
